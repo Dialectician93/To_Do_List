@@ -1,0 +1,161 @@
+:root{
+    --pink: hsla(298, 60%, 61%, 1);
+    --green: rgb(52, 171, 34);
+    --dark-green:rgb(8, 66, 20);
+    --dark-blue:hsla(258, 96%, 22%, 1);
+    --blue:hsla(230, 96%, 28%, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2015/06/02/12/59/book-794978_1280.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--dark-green);
+    perspective: 1500px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+h1{
+    font-size: 3rem;
+    color: rgb(230, 130, 15);
+    font-weight: 400;
+    margin: 0 0 2rem 0;
+}
+
+i{
+    cursor: pointer;
+}
+#input{
+    border: 1px solid black;
+    padding: 15px 7px;
+    padding-left: 10px;
+    padding-right: 32px;
+    width: 70vw;
+    max-width: 800px;
+    border-radius: 5px;
+    margin-left: 33px;
+    margin-bottom: 1rem;
+}
+#input::selection{
+    color: white;
+    background: var(--green);
+}
+#input:focus{
+    outline: none;
+}
+.fa-plus{
+    position: relative;
+    left: -38px;
+    top: 1.5px;
+    background-color: white;padding: .5rem;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px;
+    width: 70vw;
+    max-width: 800px;
+    min-width: 300px;
+    border-radius: 5px;
+    margin:.3rem 0;
+    background-color: white;
+    animation: myAnimationReverse .8s;
+    word-break: break-all;
+}
+section span{
+    margin: 0 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.span-line{
+    text-decoration: line-through;
+}
+
+.dark{
+    color:white;
+    background-color: var(--green);
+    animation: myAnimation .7s ;
+}
+
+@keyframes myAnimation{
+    0%{
+        opacity: 0;
+        transform: rotateX(0deg)
+    }
+    33%{
+        transform: rotateX(45deg)
+    }
+    66%{
+        transform: rotateX(-25deg)
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes myAnimationReverse{
+    0%{
+        opacity: 0;
+        transform: rotateX(0deg)
+    }
+    33%{
+        transform: rotateX(45deg)
+    }
+    66%{
+        transform: rotateX(-25deg)
+    }
+    100%{
+        transform: rotateX(0deg)
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    h1{
+        font-size: 2rem;
+        color: rgb(169, 37, 176);
+        font-weight: 400;
+        margin: 0 0 2rem 0;
+    }
+    #input{
+        border: 1px solid rgb(254, 5, 5);
+        padding: 10px 5px;
+        padding-left: 10px;
+        width: 70vw;
+        max-width: 800px;
+        border-radius: 5px;
+        margin-left: 33px;
+        margin-bottom: 1rem;
+    }
+    section{
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        width: 70vw;
+        max-width: 800px;
+        min-width: 300px;
+        border-radius: 5px;
+        margin:.3rem 0;
+        background-color: rgb(245, 245, 245);
+        animation: myAnimationReverse .8s;
+    }
+}
